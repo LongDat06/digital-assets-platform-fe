@@ -9,4 +9,4 @@ application.register('download', DownloadController)
 application.register('selection', SelectionController)
 
 
-export default application 
+export default application

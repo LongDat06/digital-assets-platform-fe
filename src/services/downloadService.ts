@@ -19,9 +19,9 @@ export const downloadFile = async (purchaseId: number, authToken: string): Promi
       console.error('Error downloading file:', error)
       throw error
     }
-  }
+}
   
-  const triggerFileDownload = (blob: Blob, filename: string): void => {
+const triggerFileDownload = (blob: Blob, filename: string): void => {
     const url = window.URL.createObjectURL(blob)
     const downloadLink = document.createElement('a')
     downloadLink.href = url
@@ -30,4 +30,4 @@ export const downloadFile = async (purchaseId: number, authToken: string): Promi
     downloadLink.click()
     downloadLink.remove()
     window.URL.revokeObjectURL(url)
-  }
+}
